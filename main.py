@@ -10,21 +10,20 @@
 """
 
 
-# Создаем клас
+# Создаем клас с инкапсуляцией
 class Books:
     def __init__(self, name: str, author: str, year: int, price: str, comment: str, rating: str):
-        self.name = name
-        self.author = author
-        self.year = year
-        self.price = price + 'грн'
-        self.review = comment
-        self.rating = rating + ' из 10'
-
+        self.__name = name
+        self.__author = author
+        self.__year = year
+        self.__price = price + 'грн'
+        self.__review = comment
+        self.__rating = rating + ' из 10'
 
 # Делаем метод __str__()
     def __str__(self):
-        return f'{self.name}. Автор {self.author}, издана в {self.year} году, цена {self.price}. ' \
-               f'Рецензия: {self.review} {self.rating}'
+        return f'{self.__name}. Автор {self.__author}, издана в {self.__year} году, цена {self.__price}. ' \
+               f'Рецензия: {self.__review} {self.__rating}'
 
 
 # Список моих любимых книг
