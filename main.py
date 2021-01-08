@@ -25,6 +25,13 @@ class Books:
         return f'{self.__name}. Автор {self.__author}, издана в {self.__year} году, цена {self.__price}. ' \
                f'Рецензия: {self.__review} {self.__rating}'
 
+# Аксессоры
+    def get_name(self) -> str:
+        return self.__name
+
+    def get_review(self) -> str:
+        return self.__review
+
 
 # Список моих любимых книг
 b1 = Books('Гарри Поттер и кубок огня', 'Дж. К. Роулинг', 2000, '200', 'Моя любимейшая книга! Просто обожаю!', '11')
@@ -41,3 +48,11 @@ print('->', b2)
 print('->', b3)
 print('->', b4)
 print('->', b5)
+
+print('==============Ревью===============')
+print(b1.get_name(), '->', b1.get_review())
+print(b2.get_name(), '->', b2.get_review())
+print(b3.get_name(), '->', b3.get_review())
+print(b4.get_name(), '->', b4.get_review())
+print(b5.get_name(), '->', b5.get_review())
+
